@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	 version="3.1">
+    
+    <!--web.xml是一个web程序的全局配置文件，一个web程序有且仅有一个web.xml文件
+        用于配置全局性信息，比如欢迎页面、错误页面以及注册servlet等组件
+        servlet需要注册后才能使用
+    -->
+    
+    <!--1. 使用servlet标记指定一个servlet的基本信息-->
+    <servlet>
+        <!--servlet-name用于指定servlet的名称，可以随意命名-->
+        <servlet-name>cetServlet</servlet-name>
+        <!--servlet-class用于指定servlet的类名-->
+        <servlet-class>com.qdu.servlet.CetServlet</servlet-class>
+    </servlet>
+    
+    <!--2. 使用servlet-mapping标记指定servlet的映射信息，也就是访问路径-->
+    <servlet-mapping>
+        <!--servlet-name用于指定servlet的名称，要和servlet标记中的名称一致-->
+        <servlet-name>cetServlet</servlet-name>
+        <!--url-pattern用于指定servlet的url，也就是访问serlvet的路径-->
+        <url-pattern>/cs</url-pattern>
+    </servlet-mapping>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

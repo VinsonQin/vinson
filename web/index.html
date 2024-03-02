@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>四六级查询</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+        <style>
+            #form1{
+                width: 320px;
+                margin: 130px auto; /*margin用于设置外边距，左右auto可以让其水平居中*/
+                padding: 20px 30px;
+                box-shadow: 7px 7px 10px grey;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            
+            <!--form用于收集用户信息-->
+            <!--这里的action="cs"表示提交表单给cs处理-->
+            <!--cs对应的是CetServlet-->
+            <form   action="cs"
+                    id="form1" class="bg-primary form-inline text-center">
+                <h1>四六级查询</h1>
+                <hr>
+                <br>
+                <!--name用于指定一个名称，表示提交给服务器的请求参数的名称-->
+                <!--客户端提交/发送给服务器的数据叫做请求参数(request parameter)-->
+                <!--name的值可以随意指定，但要尽量有意义-->
+                考 号：<input type="text" name="exam_id" class="form-control">
+                <br><br>
+                姓 名：<input type="text" name="exam_name" class="form-control">
+                <br><br>
+                <!--表单中的按钮默认是提交按钮，点击后就会提交表单中的数据-->
+                <button class="btn btn-default">查询</button>
+            </form>
+            
+        </div>
+    </body>
+</html>
